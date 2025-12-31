@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir \
     einops \
     torchvision \
     torch \
-    safetensors \
+    safetensors
 
 
 
