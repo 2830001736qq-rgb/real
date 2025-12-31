@@ -10,7 +10,10 @@ RUN pip install --no-cache-dir \
     huggingface-hub \
     qwen-vl-utils \
     timm \
-    einops
+    einops \
+    torchvision \
+    torch \
+    safetensors \
 
 
 
