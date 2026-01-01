@@ -20,11 +20,12 @@ def process_edit(target_img, ref_img, prompt):
     
     # No manual resize – pipeline auto-handles to ~1MP
     inputs = {
-        "image": [target_img.convert("RGB"), ref_img.convert("RGB")],
+        "image": [ref_img.convert("RGB"), target_img.convert("RGB")],
         "prompt": prompt,
-        "negative_prompt": " ",  # Required for CFG >1
-        "num_inference_steps": 30,  # Basic: 30 steps for speed/quality
-        "true_cfg_scale": 4.0,
+        "negative_prompt": "not too dramatic and unreal",  # Required for CFG >1
+        "num_inference_steps": 50,  # Basic: 30 steps for speed/quality
+        "true_cfg_scale": 7.5,
+        
     }
     
     with torch.inference_mode():
